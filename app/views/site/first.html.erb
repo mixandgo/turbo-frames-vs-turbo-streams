@@ -1,8 +1,8 @@
-<%= turbo_frame_tag "frame1" do %>
-  <div class="w-full text-center my-8">
-    <%= link_to "Load stuff!", second_page_path, class: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" %>
-  </div>
+<div class="w-full text-center my-8">
+  <%= link_to "Load stuff!", second_page_path, data: { turbo_frame: "frame1" }, class: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" %>
+</div>
 
+<%= turbo_frame_tag "frame1" do %>
   <div class="my-8 w-full mx-auto" id="content">
     <%= render "the_stuff" %>
   </div>
