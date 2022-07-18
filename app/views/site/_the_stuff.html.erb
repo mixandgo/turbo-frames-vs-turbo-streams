@@ -1,0 +1,6 @@
+<div class="py-4 mb-8 border text-center shadow-lg font-bold bg-white">
+  <%= Time.now.strftime("%d %b %Y, %H:%M:%S") %>
+</div>
+<% 100.times do %>
+  <p class="my-4"><%= Faker::Lorem.paragraph(sentence_count: 6) %></p>
+<% end %>
