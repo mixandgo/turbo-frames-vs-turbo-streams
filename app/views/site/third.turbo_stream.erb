@@ -1,0 +1,7 @@
+<%= turbo_stream.update "content" do %>
+  <%= render "the_stuff" %>
+<% end %>
+
+<%= turbo_stream.before "content" do %>
+  ADDED BEFORE
+<% end %>
